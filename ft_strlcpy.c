@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 12:08:00 by ssawa             #+#    #+#             */
-/*   Updated: 2025/04/25 12:09:15 by ssawa            ###   ########.fr       */
+/*   Created: 2025/04/25 15:33:25 by ssawa             #+#    #+#             */
+/*   Updated: 2025/04/25 15:44:41 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
-{
-	unsigned char	uc;
+#include <stddef.h>
+#include <unistd.h>
 
-	uc = c;
-	if (uc >= 0 && uc <= 127)
+size_t	my_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	while (src[i])
+		i++;
+	if (dstsize == 0)
+		return (i);
+	j = 0;
+	while (j < dstsize - 1 && src[j])
 	{
-		return (1);
+		dst[j] = src[j];
+		j++;
 	}
-	else
-	{
-		return (0);
-	}
+	dst[j] = '\0';
+	return (i);
 }

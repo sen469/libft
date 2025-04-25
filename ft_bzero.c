@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 12:08:00 by ssawa             #+#    #+#             */
-/*   Updated: 2025/04/25 12:09:15 by ssawa            ###   ########.fr       */
+/*   Created: 2025/04/25 14:43:53 by ssawa             #+#    #+#             */
+/*   Updated: 2025/04/25 14:46:13 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
-{
-	unsigned char	uc;
+#include <unistd.h>
 
-	uc = c;
-	if (uc >= 0 && uc <= 127)
+void	ft_bzero(void *s, size_t len)
+{
+	unsigned char	*us;
+
+	us = (unsigned char *)s;
+	while (len-- > 0)
 	{
-		return (1);
-	}
-	else
-	{
-		return (0);
+		*(us++) = '\0';
 	}
 }

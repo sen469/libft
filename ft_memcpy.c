@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 12:08:00 by ssawa             #+#    #+#             */
-/*   Updated: 2025/04/25 12:09:15 by ssawa            ###   ########.fr       */
+/*   Created: 2025/04/25 15:02:37 by ssawa             #+#    #+#             */
+/*   Updated: 2025/04/25 15:08:15 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
-{
-	unsigned char	uc;
+#include <unistd.h>
 
-	uc = c;
-	if (uc >= 0 && uc <= 127)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char	*ud;
+	unsigned char	*us;
+
+	ud = (unsigned char *)dest;
+	us = (unsigned char *)src;
+	while (n > 0)
 	{
-		return (1);
+		*ud = *us;
+		dest++;
+		src++;
 	}
-	else
-	{
-		return (0);
-	}
+	return (dest);
 }

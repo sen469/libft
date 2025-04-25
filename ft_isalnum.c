@@ -12,15 +12,18 @@
 
 int	ft_isalnum(int c)
 {
-	if (c >= '0' && c <= '9')
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
+	if (uc >= '0' && uc <= '9')
 	{
 		return (1);
 	}
-	else if (c >= 'a' && c <= 'z')
+	else if (uc >= 'a' && uc <= 'z')
 	{
 		return (1);
 	}
-	else if (c >= 'A' && c <= 'Z')
+	else if (uc >= 'A' && uc <= 'Z')
 	{
 		return (1);
 	}

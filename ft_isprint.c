@@ -12,12 +12,15 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= '!' && c <= '~')
+	unsigned char	uc;
+
+	uc = c;
+	if (uc >= '!' && uc <= '~')
 	{
 		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
