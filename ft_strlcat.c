@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 15:09:15 by ssawa             #+#    #+#             */
-/*   Updated: 2025/04/25 16:23:19 by ssawa            ###   ########.fr       */
+/*   Created: 2025/04/25 16:03:35 by ssawa             #+#    #+#             */
+/*   Updated: 2025/04/25 16:41:01 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t count)
+size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
 {
-	unsigned char	*ud;
-	unsigned char	*us;
+	size_t	i;
+	size_t	j;
+	int		k;
+	int		mx_copy;
 
-	ud = (unsigned char *)dest;
-	us = (unsigned char *)src;
-	while (count-- > 0)
+	i = ft_strlen(dst);
+	j = ft_strlen(src);
+	mx_copy = dstsize - i - 1;
+	if (dstsize < i)
+		return (i + j);
+	else
 	{
-		*ud = *us;
-		ud++;
-		us++;
+		k = 0;
+		while (k < mx_copy)
+		{
+			dst[i + k] = src[k];
+			k++;
+		}
+		dst[i + k] = '\0';
+		return (dstsize + j);
 	}
-	return (dest);
 }

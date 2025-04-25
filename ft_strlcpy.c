@@ -6,14 +6,13 @@
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 15:33:25 by ssawa             #+#    #+#             */
-/*   Updated: 2025/04/25 15:44:41 by ssawa            ###   ########.fr       */
+/*   Updated: 2025/04/25 16:23:58 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <unistd.h>
 
-size_t	my_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
