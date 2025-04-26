@@ -6,7 +6,7 @@
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 08:20:58 by ssawa             #+#    #+#             */
-/*   Updated: 2025/04/26 08:26:38 by ssawa            ###   ########.fr       */
+/*   Updated: 2025/04/26 16:23:47 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	*ft_calloc(size_t number, size_t size)
 	{
 		return (NULL);
 	}
-	ft_memset(mlc, 0, size);
+	ft_memset(mlc, 0, size * number);
 	return (mlc);
 }
