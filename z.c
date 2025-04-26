@@ -1,11 +1,10 @@
 #include "libft.h"
+#include <limits.h>
 #include <stdio.h>
 
-char *ft_itoa(int n);
-
+void ft_putnbr_fd(int n, int fd);
 int main()
 {
-	int n = 416728;
-	// char *c = ft_itoa(n);
-	// printf("%s\n", c);
+	int n = INT_MAX;
+	ft_putnbr_fd(n, 1);
 }

@@ -32,6 +32,7 @@ void	*ft_memmove(void *dest, const void *src, size_t count);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd_long(long n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(const char *str, char c);
 char	*ft_strchr(const char *str, int c);
