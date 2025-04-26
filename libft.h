@@ -6,7 +6,7 @@
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 23:07:55 by ssawa             #+#    #+#             */
-/*   Updated: 2025/04/25 16:27:34 by ssawa            ###   ########.fr       */
+/*   Updated: 2025/04/26 11:36:42 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-int		my_atoi(const char *str);
+int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t len);
-void	*calloc(size_t number, size_t size);
+void	*ft_calloc(size_t number, size_t size);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
@@ -29,14 +29,18 @@ int		ft_memcmp(const void *buf1, const void *buf2, size_t count);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t count);
 void	*ft_memset(void *s, int c, size_t n);
+char	**ft_split(const char *str, char c);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *str);
+char	*ft_strjoin(const char *str1, const char *str2);
 size_t	ft_strlcat(char *dst, char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 int		ft_strlen(char *str);
 int		ft_strncmp(const char *str1, const char *str2, size_t count);
 char	*ft_strnstr(const char *big, const char *small, size_t len);
 char	*ft_strrchr(const char *str, int c);
+char	*ft_strtrim(const char *str, const char *set);
+char	*ft_substr(const char *str, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
