@@ -15,7 +15,7 @@ int	ft_isprint(int c)
 	unsigned char	uc;
 
 	uc = c;
-	if (uc >= '!' && uc <= '~')
+	if (uc >= ' ' && uc <= '~')
 	{
 		return (1);
 	}

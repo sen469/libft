@@ -18,9 +18,7 @@ void	*ft_calloc(size_t number, size_t size)
 
 	mlc = (void *)malloc(number * size);
 	if (mlc == NULL)
-	{
 		return (NULL);
-	}
 	ft_memset(mlc, 0, size * number);
 	return (mlc);
 }

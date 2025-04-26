@@ -15,21 +15,18 @@
 char	*ft_substr(const char *str, unsigned int start, size_t len)
 {
 	char	*res;
-	int		mx_len;
+	size_t		mx_len;
 
 	mx_len = ft_strlen((char *)str);
-	if ((int)start + (int)len >= mx_len)
-	{
+	if (start >= mx_len)
+		return (ft_strdup(""));
+	if (start + len >= mx_len)
 		len = mx_len - start;
-	}
 	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (res == NULL)
-	{
 		return (NULL);
-	}
+	res[len] = '\0';
 	while (len-- > 0)
-	{
 		res[len] = str[start + len];
-	}
 	return (res);
 }

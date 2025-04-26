@@ -14,16 +14,26 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {
+	size_t			idx;
 	unsigned char	*ud;
 	unsigned char	*us;
 
 	ud = (unsigned char *)dest;
 	us = (unsigned char *)src;
-	while (count-- > 0)
+	if (src > dest)
 	{
-		*ud = *us;
-		ud++;
-		us++;
+		idx = 0;
+		while (idx < count)
+		{
+			ud[idx] = us[idx];
+			idx++;
+		}
+	}
+	else if (src < dest)
+	{
+		idx = count;
+		while (idx-- > 0)
+			ud[idx] = us[idx];
 	}
 	return (dest);
 }

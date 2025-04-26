@@ -18,21 +18,21 @@ void	ft_putnbr_fd_long(long n, int fd)
 
 	if (n < 0)
 	{
-		n = -n;
 		write(fd, "-", 1);
+		n = -n;
 	}
-	while (n >= 10)
+	if (n >= 10)
 	{
-		c = n % 10;
 		ft_putnbr_fd_long(n / 10, fd);
-		ft_putchar_fd(c, fd);
 	}
+	c = '0' + n % 10;
+	ft_putchar_fd(c, fd);
 }
 
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	num;
 
-	num = n;
+	num = (long)n;
 	ft_putnbr_fd_long(num, fd);
 }
