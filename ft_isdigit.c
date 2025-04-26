@@ -24,12 +24,3 @@ int	ft_isdigit(int c)
 		return (0);
 	}
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-	printf("%d\n", ft_isdigit('3'));
-	printf("%d\n", ft_isdigit('a'));
-}
-*/

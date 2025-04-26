@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	isset(char c, const char *set)
+static int	isset(char c, const char *set)
 {
 	while (*set)
 	{
@@ -25,7 +25,7 @@ int	isset(char c, const char *set)
 	return (0);
 }
 
-int	pre_set_cnt(const char *str, const char *set)
+static int	pre_set_cnt(const char *str, const char *set)
 {
 	int	cnt;
 	int	len;
@@ -42,7 +42,7 @@ int	pre_set_cnt(const char *str, const char *set)
 	return (cnt);
 }
 
-int	suf_set_cnt(const char *str, const char *set)
+static int	suf_set_cnt(const char *str, const char *set)
 {
 	int	cnt;
 	int	len;
