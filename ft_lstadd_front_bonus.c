@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 11:24:27 by ssawa             #+#    #+#             */
-/*   Updated: 2025/04/26 11:46:02 by ssawa            ###   ########.fr       */
+/*   Created: 2025/04/27 14:05:50 by ssawa             #+#    #+#             */
+/*   Updated: 2025/04/27 16:35:09 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *str, unsigned int start, size_t len)
+void	ft_lstadd_front(t_list **lst, t_list *new_node)
 {
-	char	*res;
-	size_t	mx_len;
-
-	mx_len = ft_strlen((char *)str);
-	if (start >= mx_len)
-		return (ft_strdup(""));
-	if (start + len >= mx_len)
-		len = mx_len - start;
-	res = (char *)malloc(sizeof(char) * (len + 1));
-	if (res == NULL)
-		return (NULL);
-	res[len] = '\0';
-	while (len-- > 0)
-		res[len] = str[start + len];
-	return (res);
+	if (lst != NULL && new_node != NULL)
+	{
+		new_node->next = *lst;
+		*lst = new_node;
+	}
 }
