@@ -51,7 +51,7 @@ static int	suf_set_cnt(const char *str, const char *set)
 	len = ft_strlen((char *)str);
 	cnt = 0;
 	idx = len - 1;
-	while (idx > 0 && isset(str[idx], set))
+	while (idx >= 0 && isset(str[idx], set))
 	{
 		cnt++;
 		idx--;

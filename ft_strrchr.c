@@ -25,5 +25,7 @@ char	*ft_strrchr(const char *str, int c)
 		}
 		str++;
 	}
+	if (c == '\0')
+		pos = (char *)str;
 	return (pos);
 }

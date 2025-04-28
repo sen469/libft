@@ -14,11 +14,11 @@
 
 int	ft_memcmp(const void *buf1, const void *buf2, size_t count)
 {
-	const char	*ub1;
-	const char	*ub2;
+	const unsigned char	*ub1;
+	const unsigned char	*ub2;
 
-	ub1 = (const char *)buf1;
-	ub2 = (const char *)buf2;
+	ub1 = (const unsigned char *)buf1;
+	ub2 = (const unsigned char *)buf2;
 	while (count-- > 0)
 	{
 		if (*ub1 != *ub2)
