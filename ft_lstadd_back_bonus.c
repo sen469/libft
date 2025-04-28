@@ -27,6 +27,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new_node)
 		{
 			temp = temp->next;
 		}
-		temp-> next = new_node;
+		temp->next = new_node;
 	}
 }
