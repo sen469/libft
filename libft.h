@@ -15,8 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-#include <limits.h>
-#include <stdint.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -41,7 +40,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
-int	ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 void	*ft_memchr(const void *buf, int c, size_t count);
 int		ft_memcmp(const void *buf1, const void *buf2, size_t count);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -56,9 +55,9 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *str);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(const char *str1, const char *str2);
-size_t	ft_strlcat(char *dst, char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 char	*ft_strmapi(const char *str, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *str1, const char *str2, size_t count);
 char	*ft_strnstr(const char *big, const char *small, size_t len);

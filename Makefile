@@ -62,7 +62,7 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 bonus: $(OBJS) $(BOBJS)
-	$(AR) $(NAME) $(BOBJS)
+	$(AR) $(NAME) $(OBJS) $(BOBJS)
 
 clean:
 	$(RM) $(OBJS) $(BOBJS)
