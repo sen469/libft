@@ -16,8 +16,6 @@ int	ft_toupper(int c)
 
 	uc = (unsigned char)c;
 	if (uc >= 'a' && uc <= 'z')
-	{
-		uc = uc -32;
-	}
+		uc = uc + ('A' - 'a');
 	return ((int)uc);
 }

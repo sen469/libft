@@ -16,11 +16,7 @@ int	ft_isprint(int c)
 
 	uc = c;
 	if (uc >= ' ' && uc <= '~')
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }

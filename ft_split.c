@@ -56,9 +56,7 @@ static char	*word_splitter(const char *str, char c)
 static void	free_all(char **res, int n)
 {
 	while (n-- > 0)
-	{
 		free(res[n]);
-	}
 	free(res);
 }
 

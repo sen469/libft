@@ -20,8 +20,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	p = (unsigned char *)s;
 	uc = (unsigned char)c;
 	while (n-- > 0)
-	{
 		*p++ = uc;
-	}
 	return (s);
 }

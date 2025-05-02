@@ -16,11 +16,7 @@ int	ft_isalpha(int c)
 
 	uc = c;
 	if ((uc >= 'a' && uc <= 'z') || (uc >= 'A' && uc <= 'Z'))
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }

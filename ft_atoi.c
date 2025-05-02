@@ -25,9 +25,7 @@ int	ft_atoi(const char *str)
 		sig = -1;
 	}
 	else if (*str == '+')
-	{
 		str++;
-	}
 	while (*str && *str >= '0' && *str <= '9')
 	{
 		num = num * 10 + (*str - '0');

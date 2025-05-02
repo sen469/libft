@@ -16,8 +16,6 @@ int	ft_tolower(int c)
 
 	uc = (unsigned char)c;
 	if (uc >= 'A' && uc <= 'Z')
-	{
-		uc = uc + 32;
-	}
+		uc = uc + ('a' - 'A');
 	return ((int)uc);
 }

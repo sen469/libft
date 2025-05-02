@@ -17,9 +17,7 @@ static int	isset(char c, const char *set)
 	while (*set)
 	{
 		if (c == *set)
-		{
 			return (1);
-		}
 		set++;
 	}
 	return (0);
