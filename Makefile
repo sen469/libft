@@ -8,6 +8,7 @@ SRCS =  ft_atoi.c \
         ft_isascii.c \
         ft_isdigit.c \
         ft_isprint.c \
+        ft_isspace.c \
         ft_itoa.c \
         ft_memchr.c \
         ft_memcmp.c \
@@ -20,7 +21,7 @@ SRCS =  ft_atoi.c \
         ft_putstr_fd.c \
         ft_split.c \
         ft_strchr.c \
-		ft_strcmp.c
+        ft_strcmp.c \
         ft_strdup.c \
         ft_striteri.c \
         ft_strjoin.c \
