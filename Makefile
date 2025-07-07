@@ -58,8 +58,8 @@ RM = rm -f
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+$(NAME): $(OBJS) $(BOBJS)
+	$(AR) $(NAME) $(OBJS) $(BOBJS)
 
 all: $(NAME)
 
