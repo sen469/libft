@@ -48,8 +48,11 @@ BSRCS =	ft_lstadd_back_bonus.c \
 		ft_lstnew_bonus.c \
 		ft_lstsize_bonus.c
 
+MY_SRCS = ft_binary_search.c \
+
 OBJS = $(SRCS:.c=.o)
 BOBJS = $(BSRCS:.c=.o)
+MY_OBJS = $(MY_SRCS:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -59,8 +62,8 @@ RM = rm -f
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJS) $(BOBJS)
-	$(AR) $(NAME) $(OBJS) $(BOBJS)
+$(NAME): $(OBJS) $(BOBJS) $(MY_SRCS)
+	$(AR) $(NAME) $(OBJS) $(BOBJS) $(MY_OBJS)
 
 all: $(NAME)
 

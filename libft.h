@@ -6,7 +6,7 @@
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 23:07:55 by ssawa             #+#    #+#             */
-/*   Updated: 2025/07/05 17:20:16 by ssawa            ###   ########.fr       */
+/*   Updated: 2025/08/06 14:38:52 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+// project
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t len);
 void	*ft_calloc(size_t number, size_t size);
@@ -54,7 +55,6 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(const char *str, char c);
 char	*ft_strchr(const char *str, int c);
-int	ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdup(const char *str);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(const char *str1, const char *str2);
@@ -69,5 +69,11 @@ char	*ft_strtrim(const char *str, const char *set);
 char	*ft_substr(const char *str, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+// additional functions
+int		ft_strcmp(const char *s1, const char *s2);
+int		ft_binary_search(int *vec, int size, int key);
+int		ft_lower_bound(int *vec, int size, int key);
+int		ft_upper_bound(int *vec, int size, int key);
 
 #endif
