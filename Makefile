@@ -49,6 +49,10 @@ BSRCS =	ft_lstadd_back_bonus.c \
 		ft_lstsize_bonus.c
 
 MY_SRCS = ft_binary_search.c \
+		  ft_chmax.c \
+		  ft_chmin.c \
+		  ft_max.c \
+		  ft_min.c \
 
 OBJS = $(SRCS:.c=.o)
 BOBJS = $(BSRCS:.c=.o)
@@ -62,7 +66,7 @@ RM = rm -f
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJS) $(BOBJS) $(MY_SRCS)
+$(NAME): $(OBJS) $(BOBJS) $(MY_OBJS)
 	$(AR) $(NAME) $(OBJS) $(BOBJS) $(MY_OBJS)
 
 all: $(NAME)
