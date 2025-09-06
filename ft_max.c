@@ -10,7 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_max(int a, int b)
+int	ft_imax(int a, int b)
+{
+	if (a < b)
+		return (b);
+	else
+		return (a);
+}
+
+int	ft_lmax(long a, long b)
 {
 	if (a < b)
 		return (b);

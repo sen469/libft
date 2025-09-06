@@ -10,7 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_min(int a, int b)
+int	ft_imin(int a, int b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+int	ft_lmin(long a, long b)
 {
 	if (a < b)
 		return (a);
