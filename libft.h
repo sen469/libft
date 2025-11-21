@@ -6,7 +6,7 @@
 /*   By: ssawa <ssawa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 23:07:55 by ssawa             #+#    #+#             */
-/*   Updated: 2025/08/08 15:26:19 by ssawa            ###   ########.fr       */
+/*   Updated: 2025/09/15 09:21:03 by ssawa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-// project
+// projects
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t len);
 void	*ft_calloc(size_t number, size_t size);
@@ -71,12 +71,16 @@ int		ft_toupper(int c);
 
 // additional functions
 int		ft_strcmp(const char *s1, const char *s2);
-int		ft_binary_search(int *vec, int size, int key);
-int		ft_lower_bound(int *vec, int size, int key);
-int		ft_upper_bound(int *vec, int size, int key);
+int		ft_binary_search(int *vec, int size, const int key);
+int		ft_lower_bound(int *vec, int size, const int key);
+int		ft_upper_bound(int *vec, int size, const int key);
 int		ft_chmax(int *a, int *b);
 int		ft_chmin(int *a, int *b);
-int		ft_max(int a, int b);
-int		ft_min(int a, int b);
+int		ft_imax(int a, int b);
+int		ft_imin(int a, int b);
+long	ft_lmax(long a, long b);
+long	ft_lmin(long a, long b);
+void	free_char_deg1(char **str);
+void	free_char_deg2(char ***str);
 
 #endif
