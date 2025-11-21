@@ -31,7 +31,7 @@ int	ft_binary_search(int *vec, int size, int key)
 	return (0);
 }
 
-int	ft_lower_bound(int *vec, int size, int key)
+int	ft_lower_bound(int *vec, int size, const int key)
 {
 	int	ng;
 	int	ok;
@@ -50,7 +50,7 @@ int	ft_lower_bound(int *vec, int size, int key)
 	return (ok);
 }
 
-int	ft_upper_bound(int *vec, int size, int key)
+int	ft_upper_bound(int *vec, int size, const int key)
 {
 	int	ng;
 	int	ok;
